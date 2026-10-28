@@ -95,11 +95,65 @@ h1 {
   box-shadow: var(--shadow);
   min-height: 100%;
 }
-.card img { width: 100%; height: 320px; object-fit: cover; background: #ece6da; }
-.card div { padding: 14px 16px 18px; }
+.card .pie { padding: 14px 16px 18px; }
 .card h3 { margin: 0 0 6px; font-size: 1.2rem; letter-spacing: -0.03em; }
 .card span, .meta { color: var(--muted); font-size: 0.98rem; }
-.card:hover { transform: translateY(-3px); }
+.card:hover { box-shadow: 0 22px 44px rgba(40, 28, 12, 0.14); }
+
+.escena {
+  container-type: inline-size;
+  aspect-ratio: 1;
+  perspective: 140cqw;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    #17140f;
+  background-size: 28px 28px;
+}
+.cubo {
+  --lado: 52cqw;
+  width: var(--lado);
+  height: var(--lado);
+  margin: 24cqw;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(var(--lado) / -2)) rotateX(calc(var(--rx, 0deg) - 18deg)) rotateY(calc(var(--ry, 0deg) - 28deg));
+  transition: transform 1.15s cubic-bezier(0.65, 0.05, 0.22, 1);
+}
+.cara {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  backface-visibility: hidden;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.cara img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+.cara.frente { transform: rotateY(0deg) translateZ(calc(var(--lado) / 2)); }
+.cara.derecha { transform: rotateY(90deg) translateZ(calc(var(--lado) / 2)); }
+.cara.atras { transform: rotateY(180deg) translateZ(calc(var(--lado) / 2)); }
+.cara.izquierda { transform: rotateY(-90deg) translateZ(calc(var(--lado) / 2)); }
+.cara.arriba { transform: rotateX(90deg) translateZ(calc(var(--lado) / 2)); }
+.cara.abajo { transform: rotateX(-90deg) translateZ(calc(var(--lado) / 2)); }
+.cara.letra {
+  display: grid;
+  place-items: end start;
+  padding: 14px;
+  color: #f4efe6;
+  font-family: Syne, sans-serif;
+  font-size: 1.35rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cubo { transition: none; }
+}
 .vacio {
   display: grid;
   place-items: end start;
