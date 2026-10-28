@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Syne:wght@700;800&display=swap");
+
+:root {
+  --ink: #16130f;
+  --paper: #f4efe6;
+  --card: #fffdf8;
+  --line: #e2dacb;
+  --accent: #e10600;
+  --muted: #6d675f;
+  --shadow: 0 18px 40px rgba(40, 28, 12, 0.08);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Outfit, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+.wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  background: rgba(244, 239, 230, 0.92);
+  backdrop-filter: blur(10px);
+}
+.marca {
+  font-family: Syne, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+nav { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+nav a { text-decoration: none; color: var(--muted); font-weight: 500; }
+nav a:hover { color: var(--ink); }
+
+.hero { padding: 42px 0 18px; }
+.hero p { max-width: 38rem; margin: 0; color: var(--muted); font-size: 1.2rem; }
+h1 {
+  font-family: Syne, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  font-size: clamp(3.2rem, 8vw, 6.4rem);
+  line-height: 0.88;
+  margin: 0 0 18px;
+}
+.enlaces { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.enlaces a, .boton {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: transparent;
+  font-weight: 500;
+}
+.enlaces a:hover, .boton:hover { background: var(--ink); color: var(--paper); }
+
+.seccion { padding: 28px 0 10px; }
+.seccion h2 {
+  font-family: Syne, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.04em;
+  margin: 0 0 8px;
+}
+.lead { color: var(--muted); max-width: 40rem; margin: 0 0 22px; }
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: 22px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  min-height: 100%;
+}
+.card img { width: 100%; height: 320px; object-fit: cover; background: #ece6da; }
+.card div { padding: 14px 16px 18px; }
+.card h3 { margin: 0 0 6px; font-size: 1.2rem; letter-spacing: -0.03em; }
+.card span, .meta { color: var(--muted); font-size: 0.98rem; }
+.card:hover { transform: translateY(-3px); }
+.vacio {
+  display: grid;
+  place-items: end start;
+  min-height: 320px;
+  padding: 18px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: Syne, sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: -0.04em;
+}
+
+.pieza { display: grid; gap: 18px; }
+.pieza article {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) 1fr;
+  gap: 16px;
+  background: var(--card);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.pieza img { width: 100%; height: 100%; min-height: 220px; object-fit: cover; }
+.pieza .texto { padding: 16px 18px 18px; }
+.pieza h3 { margin: 0 0 8px; font-size: 1.25rem; }
+.bajada { white-space: pre-line; margin: 0 0 12px; }
+.fecha { color: var(--muted); }
+
+.galeria { display: grid; gap: 14px; }
+.galeria a { display: block; background: var(--card); border-radius: 18px; overflow: hidden; }
+.galeria img { width: 100%; height: auto; }
+.video { margin: 14px 0; background: #111; border-radius: 18px; overflow: hidden; }
+.video iframe { width: 100%; border: 0; display: block; }
+.audio iframe { height: 120px; }
+
+.ficha { padding-bottom: 60px; }
+.ficha h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); margin-top: 12px; }
+.volver { color: var(--muted); text-decoration: none; }
+
+footer {
+  padding: 36px 0 48px;
+  color: var(--muted);
+}
+footer a { color: var(--ink); }
+
+@media (max-width: 720px) {
+  .pieza article { grid-template-columns: 1fr; }
+  .pieza img { height: 280px; }
+  .top { align-items: flex-start; flex-direction: column; }
+}
