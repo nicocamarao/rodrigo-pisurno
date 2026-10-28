@@ -5,31 +5,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rodrigo Pisurno — Portfolio</title>
 <meta name="description" content="Portfolio de publicidad de Rodrigo Pisurno, redactor creativo en Montevideo.">
+<link rel="icon" href="favicon.svg">
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-<div class="wrap">
-<header class="top">
-  <a class="marca" href="index.html">Rodrigo Pisurno</a>
-  <nav>
-    <a href="index.html#trabajos">Trabajos</a>
-    <a href="index.html#amor">AMOR</a>
-    <a href="index.html#instagram">Instagram</a>
-  </nav>
-</header>
-<section class="hero">
-  <h1>Rodrigo<br>Pisurno</h1>
-  <p>Redactor creativo en Montevideo. Afiches, campañas y piezas de publicidad.</p>
-  <div class="enlaces">
-    <a href="https://www.behance.net/rodrigopisurno">Behance</a>
-    <a href="https://www.instagram.com/rope_iaok/">Instagram @rope_iaok</a>
-    <a href="https://www.instagram.com/amor_uy/">Preservativos AMOR</a>
-    <a href="https://www.linkedin.com/in/rodrigo-pisurno-cremona-b57702a2/">LinkedIn</a>
+<div class="ambient" aria-hidden="true"><i class="beam b1"></i><i class="beam b2"></i><i class="beam b3"></i></div>
+<header>
+  <a href="#perfil" class="logo" aria-label="Rodrigo Pisurno, perfil">rp<span>↗</span></a>
+  <span class="header-label">RODRIGO PISURNO CREMONA<br>PORTFOLIO / URUGUAY</span>
+  <div class="header-actions">
+    <button id="motion" aria-pressed="false" type="button">Pausar líneas</button>
+    <button id="flat" aria-pressed="false" type="button">Vista continua</button>
+    <a class="download" href="https://www.behance.net/rodrigopisurno">Behance ↗</a>
   </div>
-</section>
-<section class="seccion" id="trabajos">
-  <h2>Trabajos</h2>
-  <p class="lead">Cada proyecto se previsualiza en un cubo con sus imágenes. Al abrirlo están la pieza completa y el enlace original.</p>
+</header>
+<main class="layout">
+<aside>
+  <div class="eyebrow">UN PERFIL. SEIS PERSPECTIVAS.</div>
+  <nav aria-label="Secciones del perfil">
+    <a href="#perfil"><span>01</span> Perfil <small>↗</small></a>
+    <a href="#experiencia"><span>02</span> Experiencia <small>↗</small></a>
+    <a href="#formacion"><span>03</span> Formación <small>↗</small></a>
+    <a href="#aptitudes"><span>04</span> Aptitudes <small>↗</small></a>
+    <a href="#trabajos"><span>05</span> Trabajos <small>↑</small></a>
+    <a href="#recomendaciones"><span>06</span> Recomendaciones <small>↓</small></a>
+  </nav>
+  <div class="aside-note">
+    <span class="availability">REDACCIÓN PUBLICITARIA</span>
+    <p>Ideas con perspectiva.</p>
+    <span>Montevideo, Uruguay</span>
+  </div>
+</aside>
+<div class="stage">
+  <div class="stage-top"><span>COMUNICACIÓN × CREATIVIDAD</span><span id="position">01 / 06</span></div>
+  <div class="scene" aria-label="Perfil y trabajos en un cubo de seis caras">
+    <div class="cube">
+      <section id="perfil" class="face front" aria-label="Perfil"><div class="face-content profile"><div class="eyebrow">01 / PERFIL</div><div class="identity"><div><span class="kicker">IDEAS CON PERSPECTIVA.</span><h1>Rodrigo<br>Pisurno<br><em>Cremona.</em></h1><p class="role">Comunicación · Publicidad<br>Atención al cliente · Ventas</p></div><figure><img src="img/rodrigo-pisurno.png" alt="Foto de Rodrigo Pisurno Cremona" width="800" height="800"><figcaption>URUGUAY / REDACTOR CREATIVO</figcaption></figure></div><div class="about"><h2>Siempre en constante desarrollo.</h2><p>Actualmente cursando la Licenciatura en Ciencias de la Comunicación en la Universidad de la República. Amplia experiencia en atención al cliente y ventas, con conocimientos técnicos en comunicación, publicidad, relaciones públicas y marketing.</p><p>Formación técnica avalada por UTU–CETP y UdelaR. Nativo digital.</p></div><div class="face-bottom"><span>PORTFOLIO DE PUBLICIDAD</span><a href="#trabajos">Ver los trabajos →</a></div></div></section>
+      <section id="experiencia" class="face right" aria-label="Experiencia"><div class="face-content"><div class="eyebrow">02 / EXPERIENCIA</div><h2 class="title">Experiencia que<br><em>conecta con personas.</em></h2><p class="lead">Atención al cliente, ventas y tareas administrativas.</p><div class="timeline"><article><span class="date">DIC. 2010 — ACTUALIDAD</span><h3>2030</h3><p class="detail">Experiencia laboral registrada en el perfil.</p></article><article><span class="date">SEPT. 2019 — DIC. 2019 · 4 MESES</span><h3>Auxiliar administrativo</h3><p class="detail">Abitab S.A. · Jornada completa</p><p>Coordinación de la conformación de los elementos de un evento que integran las entradas emitidas por Abitab.</p><span class="location">Montevideo, Uruguay · Presencial</span></article></div></div></section>
+      <section id="formacion" class="face back" aria-label="Formación"><div class="face-content"><div class="eyebrow">03 / FORMACIÓN</div><h2 class="title">Aprender.<br><em>Aplicar. Evolucionar.</em></h2><article class="education"><span class="date">EN CURSO</span><h3>Licenciatura en Ciencias<br>de la Comunicación</h3><p>Universidad de la República</p></article><article class="education"><h3>Formación técnica</h3><p>Comunicación, publicidad, relaciones públicas y marketing.</p><p class="detail">UTU–CETP y Universidad de la República</p></article><article class="certificate"><span class="certificate-icon" aria-hidden="true">↗</span><div><span class="date">CERTIFICACIÓN · FEBRERO 2025</span><h3>Inteligencia Artificial<br>Para La Productividad</h3><p>Egg Live</p></div></article></div></section>
+      <section id="aptitudes" class="face left" aria-label="Aptitudes"><div class="face-content"><div class="eyebrow">04 / APTITUDES</div><h2 class="title">Creatividad.<br><em>Trato humano. Resolución.</em></h2><div class="skills"><article><h3>Mercadotecnia</h3><span>2 validaciones en el perfil compartido</span></article><article><h3>Microsoft Office</h3><span>3 validaciones en el perfil compartido</span></article></div><h3 class="subheading">Áreas de conocimiento y experiencia</h3><div class="tags"><span>Comunicación</span><span>Publicidad</span><span>Relaciones públicas</span><span>Marketing</span><span>Atención al cliente</span><span>Ventas</span><span>Herramientas digitales</span></div><div class="skills-note"><span>ENFOQUE DE TRABAJO</span><p>Atención a los detalles, ideas fuera de lo habitual y una actitud proactiva y resolutiva.</p></div></div></section>
+      <section id="trabajos" class="face top" aria-label="Trabajos"><div class="face-content"><div class="eyebrow">05 / TRABAJOS</div><h2 class="title">La idea es<br><em>hacer pensar.</em></h2><p class="lead">Campañas y piezas publicadas en Behance, en @rope_iaok y en Preservativos AMOR.</p><article class="work"><span>01 / VANS</span><h3>No todos<br><strong>dejan huella.</strong></h3><span>RODRIGO PISURNO · BEHANCE</span></article><article class="work second"><span>02 / AMOR</span><h3>Pedilos. Usalos.<br><strong>Disfrutalos.</strong></h3><span>@AMOR_UY · @ROPE_IAOK</span></article><a class="trabajo-link" href="#proyectos">Abrir el cubo de cada proyecto →</a></div></section>
+      <section id="recomendaciones" class="face bottom" aria-label="Recomendaciones"><div class="face-content"><div class="eyebrow">06 / RECOMENDACIONES</div><h2 class="title">Una mirada<br><em>desde el equipo.</em></h2><blockquote>“Rodrigo siempre presta atención a los detalles y presenta ideas ‘out of the box’. Siempre haciendo una eficiente gestión humana y proporcionando feedback adecuado en los proyectos de manera proactiva y resolutiva.”</blockquote><div class="attribution"><strong>Nicolas Fiumarelli</strong><span>Senior Software Developer · LACNIC</span><span>Compañero de estudios · 7 de julio de 2016</span></div><div class="network"><span><a href="https://www.behance.net/rodrigopisurno"><strong>22</strong> proyectos</a></span><span><a href="https://www.instagram.com/rope_iaok/"><strong>@</strong> rope_iaok</a></span><span><a href="https://www.instagram.com/amor_uy/"><strong>AMOR</strong> Uruguay</a></span></div></div></section>
+    </div>
+  </div>
+  <div class="controls">
+    <span id="view-label" role="status" aria-live="polite">PERFIL</span>
+    <div class="arrows" aria-label="Girar el cubo">
+      <button data-direction="left" type="button" aria-label="Girar hacia la izquierda">←</button>
+      <button data-direction="up" type="button" aria-label="Girar hacia arriba">↑</button>
+      <button data-direction="down" type="button" aria-label="Girar hacia abajo">↓</button>
+      <button data-direction="right" type="button" aria-label="Girar hacia la derecha">→</button>
+    </div>
+    <span class="hint">EXPLORÁ EN 4 DIRECCIONES</span>
+  </div>
+</div>
+</main>
+<section class="proyectos" id="proyectos">
+  <p class="eyebrow">PIEZAS</p>
+  <h2>Cada proyecto, su cubo.</h2>
+  <p class="lead">Estas son las imágenes publicadas. El cubo grande de arriba es el perfil. Acá cada trabajo gira con las suyas.</p>
   <div class="grilla">
 <a class="card" href="proyectos/No-todos-dejan-huella-Vans.html"><div class="escena" aria-hidden="true"><div class="cubo"><span class="cara frente"><img src="img/behance/No-todos-dejan-huella-Vans/01.png" alt=""></span><span class="cara derecha"><img src="img/behance/No-todos-dejan-huella-Vans/02.png" alt=""></span><span class="cara atras"><img src="img/behance/No-todos-dejan-huella-Vans/03.png" alt=""></span><span class="cara izquierda"><img src="img/behance/No-todos-dejan-huella-Vans/01.png" alt=""></span><span class="cara arriba"><img src="img/behance/No-todos-dejan-huella-Vans/02.png" alt=""></span><span class="cara abajo"><img src="img/behance/No-todos-dejan-huella-Vans/03.png" alt=""></span></div></div><div class="pie"><h3>No todos dejan huella - Vans</h3><span>Behance · 3 imágenes</span></div></a>
 <a class="card" href="proyectos/Wos-Montevideo.html"><div class="escena" aria-hidden="true"><div class="cubo"><span class="cara frente"><img src="img/behance/Wos-Montevideo/01.jpg" alt=""></span><span class="cara derecha"><img src="img/behance/Wos-Montevideo/02.jpg" alt=""></span><span class="cara atras"><img src="img/behance/Wos-Montevideo/03.jpg" alt=""></span><span class="cara izquierda"><img src="img/behance/Wos-Montevideo/04.jpg" alt=""></span><span class="cara arriba"><img src="img/behance/Wos-Montevideo/01.jpg" alt=""></span><span class="cara abajo"><img src="img/behance/Wos-Montevideo/02.jpg" alt=""></span></div></div><div class="pie"><h3>Wos Montevideo</h3><span>Behance · 4 imágenes</span></div></a>
@@ -54,26 +88,23 @@
 <a class="card" href="proyectos/Sheskeros.html"><div class="escena" aria-hidden="true"><div class="cubo"><span class="cara frente letra">Sheskeros</span><span class="cara derecha letra">Sheskeros</span><span class="cara atras letra">Sheskeros</span><span class="cara izquierda letra">Sheskeros</span><span class="cara arriba letra">Sheskeros</span><span class="cara abajo letra">Sheskeros</span></div></div><div class="pie"><h3>Sheskeros</h3><span>Behance · Ver en Behance</span></div></a>
 <a class="card" href="proyectos/Grappamiel-Titanica.html"><div class="escena" aria-hidden="true"><div class="cubo"><span class="cara frente"><img src="img/behance/Grappamiel-Titanica/01.png" alt=""></span><span class="cara derecha"><img src="img/behance/Grappamiel-Titanica/02.png" alt=""></span><span class="cara atras"><img src="img/behance/Grappamiel-Titanica/03.png" alt=""></span><span class="cara izquierda"><img src="img/behance/Grappamiel-Titanica/04.png" alt=""></span><span class="cara arriba"><img src="img/behance/Grappamiel-Titanica/05.png" alt=""></span><span class="cara abajo"><img src="img/behance/Grappamiel-Titanica/06.png" alt=""></span></div></div><div class="pie"><h3>Grappamiel Titanica</h3><span>Behance · 21 imágenes</span></div></a>
   </div>
-</section>
-<section class="seccion" id="amor">
-  <h2>Preservativos AMOR</h2>
-  <p class="lead">Pedilos. Usalos. Disfrutalos. Textos publicados en @amor_uy y en @rope_iaok.</p>
+  <h2 id="amor">Preservativos AMOR</h2>
+  <p class="lead">Pedilos. Usalos. Disfrutalos.</p>
   <div class="grilla">
     <a class="card" href="proyectos/preservativos-amor.html"><div class="escena" aria-hidden="true"><div class="cubo"><span class="cara frente"><img src="img/instagram/rope/Daaq2q4Rz7W.jpg" alt=""></span><span class="cara derecha"><img src="img/instagram/rope/DaTKObQpo9_.jpg" alt=""></span><span class="cara atras"><img src="img/instagram/amor/DexrKTzln2H.jpg" alt=""></span><span class="cara izquierda"><img src="img/instagram/amor/DesX4pHpmvA.jpg" alt=""></span><span class="cara arriba"><img src="img/instagram/amor/DeP38NavtJV.jpg" alt=""></span><span class="cara abajo"><img src="img/instagram/amor/DdnH2TwFrb9.jpg" alt=""></span></div></div><div class="pie"><h3>Preservativos AMOR</h3><span>22 publicaciones</span></div></a>
   </div>
-</section>
-<section class="seccion" id="instagram">
-  <h2>Instagram</h2>
+  <h2 id="instagram">Instagram</h2>
   <p class="lead">@rope_iaok. Innovación, diseño y estilo.</p>
   <div class="grilla">
     <a class="card" href="proyectos/instagram.html"><div class="escena" aria-hidden="true"><div class="cubo"><span class="cara frente"><img src="img/instagram/rope/Dd1bG5ARPcb.jpg" alt=""></span><span class="cara derecha"><img src="img/instagram/rope/DYkC-mKNZso.jpg" alt=""></span><span class="cara atras"><img src="img/instagram/rope/DWzwFyhCSNY.jpg" alt=""></span><span class="cara izquierda"><img src="img/instagram/rope/DYUe7z-tNCI.jpg" alt=""></span><span class="cara arriba"><img src="img/instagram/rope/DNgM7OtNuGW.jpg" alt=""></span><span class="cara abajo"><img src="img/instagram/rope/DZ-AIOhxHAg.jpg" alt=""></span></div></div><div class="pie"><h3>@rope_iaok</h3><span>24 publicaciones</span></div></a>
   </div>
 </section>
 <footer>
-  <p>Rodrigo Pisurno, redactor creativo. Montevideo. Las piezas enlazan a su publicación original en Behance o Instagram.</p>
-  <p><a href="https://www.behance.net/rodrigopisurno">Behance</a> · <a href="https://www.instagram.com/rope_iaok/">@rope_iaok</a> · <a href="https://www.instagram.com/amor_uy/">@amor_uy</a> · <a href="https://www.linkedin.com/in/rodrigo-pisurno-cremona-b57702a2/">LinkedIn</a></p>
+  <span>RODRIGO PISURNO CREMONA</span>
+  <span>Comunicación y creatividad · Uruguay</span>
+  <span><a href="https://www.behance.net/rodrigopisurno">Behance</a> · <a href="https://www.instagram.com/rope_iaok/">@rope_iaok</a> · <a href="https://www.linkedin.com/in/rodrigo-pisurno-cremona-b57702a2/">LinkedIn</a></span>
 </footer>
-</div>
+<script src="js/principal.js"></script>
 <script src="js/cubos.js"></script>
 </body>
 </html>
