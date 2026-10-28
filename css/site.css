@@ -29,6 +29,7 @@ img { max-width: 100%; display: block; }
   top: 0;
   z-index: 5;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
