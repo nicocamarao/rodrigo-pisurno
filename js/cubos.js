@@ -1,7 +1,9 @@
 (() => {
   const poses = [[0, 0], [0, -90], [0, -180], [0, 90], [-90, 0], [90, 0]];
   const reducido = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  document.querySelectorAll(".cubo").forEach((cubo, indice) => {
+  function iniciar() {
+  document.querySelectorAll(".cubo:not([data-cubo-listo])").forEach((cubo, indice) => {
+    cubo.dataset.cuboListo = "true";
     let paso = indice % poses.length;
     const pintar = () => {
       const [x, y] = poses[paso];
@@ -29,4 +31,7 @@
     tarjeta.addEventListener("focusin", pausar);
     tarjeta.addEventListener("focusout", seguir);
   });
+  }
+  iniciar();
+  document.addEventListener("cms:collections-rendered", iniciar);
 })();

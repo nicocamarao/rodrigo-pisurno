@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editar portfolio — Rodrigo Pisurno</title>
+  <link rel="icon" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/admin-extra.css">
+</head>
+<body>
+  <header class="admin-header">
+    <a href="../index.html" class="brand">rp<span>↗</span></a>
+    <div><strong>Editor del portfolio</strong><small>Los cambios se publican al guardar.</small></div>
+    <button id="logout" class="secondary" type="button" hidden>Cerrar sesión</button>
+  </header>
+
+  <main>
+    <section id="login-panel" class="panel login-panel">
+      <p class="eyebrow">ACCESO PRIVADO</p>
+      <h1>Editar el sitio</h1>
+      <form id="login-form">
+        <label>Usuario<input name="username" autocomplete="username" required></label>
+        <label>Contraseña<input name="password" type="password" autocomplete="current-password" required></label>
+        <button type="submit">Entrar</button>
+        <p id="login-message" class="message" role="status"></p>
+      </form>
+    </section>
+
+    <form id="editor" hidden>
+      <div class="editor-intro">
+        <div><p class="eyebrow">CONTENIDO</p><h1>Todo el sitio</h1></div>
+        <p>Editá los campos de arriba hacia abajo. Las imágenes nuevas se suben al elegirlas.</p>
+      </div>
+      <section class="panel">
+        <h2>Cubo inicial y textos generales</h2>
+        <div id="profile-image"></div>
+        <div id="text-fields" class="field-list"></div>
+      </section>
+      <section class="panel">
+        <div class="section-heading"><div><h2>Secciones y proyectos</h2><p>Cada proyecto se muestra como un cubo.</p></div>
+          <button id="add-collection" class="secondary" type="button">+ Agregar sección</button>
+        </div>
+        <div id="collections"></div>
+      </section>
+      <div class="save-bar">
+        <p id="save-message" class="message" role="status"></p>
+        <button id="save" type="submit">Guardar y publicar</button>
+      </div>
+    </form>
+  </main>
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proyecto — Rodrigo Pisurno</title>
+  <meta name="description" content="Portfolio de publicidad de Rodrigo Pisurno.">
+  <link rel="icon" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="barra">
+      <a class="marca" href="../index.html#perfil">rp</a>
+      <nav><a href="../index.html#proyectos">Trabajos</a><a href="../index.html">Portfolio</a></nav>
+    </header>
+    <main class="ficha" id="project"><p class="meta">Cargando proyecto…</p></main>
+    <footer><p>Rodrigo Pisurno, redactor creativo. Montevideo.</p></footer>
+  </div>
+  <script type="module">
+    import { findProject, loadContent } from "../js/cms-core.js";
+    const escapeHtml = (value = "") => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+    const root = document.querySelector("#project");
+    try {
+      const found = findProject(await loadContent(), new URLSearchParams(location.search).get("id"));
+      if (!found) throw new Error("Proyecto no encontrado.");
+      const { project, collection } = found;
+      document.title = `${project.title} — Rodrigo Pisurno`;
+      root.innerHTML = `<p class="volver"><a href="../index.html#${encodeURIComponent(collection.id)}">← ${escapeHtml(collection.title)}</a></p>
+        <p class="meta">${escapeHtml(project.subtitle)}</p><h1>${escapeHtml(project.title)}</h1>
+        ${project.externalUrl ? `<p><a class="boton" href="${escapeHtml(project.externalUrl)}" target="_blank" rel="noopener">Ver publicación original ↗</a></p>` : ""}
+        <div class="galeria">${(project.images || []).map((url) =>
+          `<a href="${escapeHtml(url)}"><img src="${escapeHtml(url)}" alt="${escapeHtml(project.title)}"></a>`).join("")}</div>`;
+    } catch (error) {
+      root.innerHTML = `<h1>No encontramos este proyecto.</h1><p>${escapeHtml(error.message)}</p><p><a class="boton" href="../index.html#proyectos">Volver al portfolio</a></p>`;
+    }
+  </script>
+</body>
+</html>

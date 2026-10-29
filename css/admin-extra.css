@@ -1,0 +1,4 @@
+.url-upload{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:10px}
+.url-upload input{min-width:0}
+.url-upload button{white-space:nowrap}
+@media(max-width:650px){.url-upload{grid-template-columns:1fr}}

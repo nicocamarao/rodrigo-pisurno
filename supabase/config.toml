@@ -1,0 +1,4 @@
+project_id = "edmlmxzvbclimlnxrylw"
+
+[functions.portfolio-admin]
+verify_jwt = false
